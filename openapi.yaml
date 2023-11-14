@@ -96,17 +96,18 @@ paths:
         - token:
             - write:apiKey
             - read:apiKey
+
 components:
   schemas:
-        user:
+    user:
       type: object
       properties:
         username:
           type: string
-          example : cihuy
+          example : edumas1
         password:
           type: string
-          example: cihuypaswort
+          example: 4321234
     Response:
       type: object
       properties:
@@ -130,7 +131,7 @@ components:
           properties:
             username:
               type: string
-              example: cihuy
+              example: edumas1
             password:
               type: string
               example: hashed password
@@ -142,10 +143,10 @@ components:
       properties:
         username:
           type: string
-          example: cihuy
+          example: edumas1
         password:
           type: string
-          example: cihuypasworthash
+          example: 4321234
     bodycord:
       type: object
       properties:
@@ -154,7 +155,7 @@ components:
           example: polygon
         name:
           type: string
-          example: rofi
+          example: rumah
         volume:
           type: string
           example: "1"
@@ -169,7 +170,7 @@ components:
           example: Selamat Datang
         token:
           type: string
-          example: cihuy
+          example: tokennya
   requestBodies:
     AuthReq:
       description: Request Authentication
