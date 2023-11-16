@@ -75,7 +75,7 @@ paths:
     post:
       tags:
         - register
-      summary: Register User Without Token
+      summary: Register User
       description: Daftar Akun User
       operationId: authService
       requestBody:
