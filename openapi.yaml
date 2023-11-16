@@ -12,7 +12,7 @@ info:
   version: 0.1.0
 externalDocs:
   description: Swagger
-  url: https://1214005gis5.github.io
+  url: https://1214005gis5.github.io/swagger
 servers:
   - url: https://asia-southeast2-argon-fire-401902.cloudfunctions.net/
 tags:
