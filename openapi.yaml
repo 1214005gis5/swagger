@@ -32,6 +32,31 @@ tags:
       description: Deskripsi dan Kode Program
       url: https://github.com/raffzhm/gcfbackend1214005
 paths:
+  /postGIS4:
+    post:
+      tags:
+        - data
+      summary: Insert Data Geo
+      description: Inser data
+      operationId: postGeoJSON
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InsertData'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseInsert'
+        '405':
+          description: Invalid input          
+      security:
+        - Token:
+          - write:apiKey
+          - read:apiKey
   /fetchGeoJson:
     get:
       tags:
@@ -71,6 +96,10 @@ paths:
                 $ref: '#/components/schemas/AuthResponse'
         '405':
           description: Invalid input
+      security:
+        - Token:
+            - write:apiKey
+            - read:apiKey
   /regisGISChpater5:
     post:
       tags:
@@ -93,7 +122,7 @@ paths:
         '405':
           description: Invalid input
       security:
-        - Login:
+        - Token:
             - write:apiKey
             - read:apiKey
 
@@ -138,6 +167,27 @@ components:
             role:
               type: string
               example: user
+    ResponseInsert:
+      type: object
+      properties:
+        status:
+          type: bool
+          example: true
+        message:
+          type: string
+          example: Berhasil Input Data
+    InsertData:
+      type: object
+      properties:
+        type:
+          type: string
+          example: Point
+        name:
+          type: string
+          example: rawr
+        volume:
+          type: string
+          example: 123123
     Auth:
       type: object
       properties:
