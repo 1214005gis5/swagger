@@ -254,7 +254,7 @@ components:
             items:
               $ref: '#/components/schemas/AuthResponse'
   securitySchemes:
-    Login:
+    Token:
       type: apiKey
       name: token
       in: header
