@@ -349,5 +349,5 @@ components:
   securitySchemes:
     Token:
       type: apiKey
-      name: token
+      name: Login
       in: header
